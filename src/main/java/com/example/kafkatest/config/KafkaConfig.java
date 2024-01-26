@@ -37,7 +37,7 @@ public class KafkaConfig {
     @Bean
     public KafkaConsumer<String, String> getKafkaConsumer(){
         Properties props = new Properties();
-        props.put("bootstrap.servers", "192.168.0.244:9092");
+        props.put("bootstrap.servers", "카프카를.실행하는머신의.퍼블릭아이피.주소:9092");
         props.put("group.id", "test-consumer");
         props.put("enable.auto.commit", "true");
         props.put("auto.offset.reset", "latest");
