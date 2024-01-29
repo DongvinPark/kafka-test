@@ -45,7 +45,7 @@ public class KafkaConfig {
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
 
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
-        consumer.subscribe(Arrays.asList("test-topic"));
+        consumer.subscribe(Arrays.asList("구독하고자하는 토픽의 이름"));
         return consumer;
     }
 
