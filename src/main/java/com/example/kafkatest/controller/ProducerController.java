@@ -18,9 +18,9 @@ public class ProducerController {
         producer.pub("my-kafka-message-01");
     }
 
-    @GetMapping("/check")
+    /*@GetMapping("/check")
     public void checkItems(){
         consumerService.displayItems();
-    }
+    }*/
 
 }

@@ -27,8 +27,17 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	// spring kafka - for producer
-	implementation 'org.springframework.kafka:spring-kafka'
+	// spring kafka - for producer & consumer
+	// https://mvnrepository.com/artifact/org.springframework.kafka/spring-kafka
+	/*
+	중요한 점!!!
+	org.springframework.kafka:spring-kafka 를 gradle로 임포트 할 때,
+	스프링 공식 문서인
+	https://spring.io/projects/spring-kafka
+	의 표에서 설명하는 것과 같이, 스프링부트 버전과 호환되는 버전의 Spring for Apache Kafka
+	를 임포트 해야 컨슈머 설정이 정상 작동한다!! 버전에 유의하라!!
+	* */
+	implementation 'org.springframework.kafka:spring-kafka:3.0.13'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 }
 
