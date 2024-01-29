@@ -30,11 +30,6 @@ dependencies {
 	// spring kafka - for producer
 	implementation 'org.springframework.kafka:spring-kafka'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
-
-	// apache kafka client - for consumer
-	// https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients
-	implementation 'org.apache.kafka:kafka-clients:3.6.1'
-
 }
 
 tasks.named('bootBuildImage') {
