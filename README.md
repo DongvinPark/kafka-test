@@ -1,4 +1,4 @@
-# Aphche Kafka Simple Setting
+# Apache Kafka Simple Setting
 
 <br><br/>
 - 1 대의 머신으로만 구성된 카프카 클러스터를 셋팅하고 스프링부트를 이용해서 카프카 클러스터에 pub/sub하는 방법을 설명한다.
