@@ -16,7 +16,7 @@
 - 우분투의 home/{your-linux-user-name} 디렉토리 내부에 kafka 라는 디렉토리를 만들고,
   <br>이 안에 아파치 카프카 바이너리 파일을 다운 받아서 옮겨 놓는다.
   <br>source code 파일이 아니라, 반드시 binary 파일로 다운 받아야 별도의 빌드 없이
-  br>실행용 셸스크립트 파일을 ./...sh 라는 명령어로 실행하는 것만으로 간단하게 카프카 서버를 구동시킬 수 있다!
+  <br>kafka-server-start.sh  라는 셸스크립트 파일에 적절한 옵션을 줘서 실행하는 것만으로 간단하게 카프카 서버를 구동시킬 수 있다.
 
 <br><br/>
 - 다운로드를 완료 했다면,
@@ -30,6 +30,10 @@
   <br>advertized.listeners=PLAINTEXT://your.host.name:9092 부분을
   <br>advertized.listeners=PLAINTEXT://{아까기록한 우분투 머신의 퍼블릭 IP 주소}:9092
   <br>로 바꿔 준다. 주석은 당연히 해제해야 한다.
+  <br>만약 카프카 운영 환경이 AWS EC2 t2.micro 처럼 RAM이 1GB 밖에 안 되는 머신이라면,
+  <br>bin 디렉토리의 kafka-server-start.sh 를 vim으로 연 후, KAFKA_HEAP_OPS="-Xmx1G -Xms1G"를
+  <br>KAFKA_HEAP_OPS="-Xmx400m -Xms400m" 이렇게 바꿔줘야 한다.
+  <br>이것은 카프카가 메모리에서 사용하는 힙의 최대,최소 크기를 1GB에서 400MB메가로 바꾸겠다는 뜻이다.
 
 <br><br/>
 - 그후, bin 디렉토리에 들어가고, 터미널 창을 하나 더 열어서 kafka 바이너리를 압축해제 해서
