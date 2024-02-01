@@ -33,7 +33,7 @@
   <br>만약 카프카 운영 환경이 AWS EC2 t2.micro 처럼 RAM이 1GB 밖에 안 되는 머신이라면,
   <br>bin 디렉토리의 kafka-server-start.sh 를 vim으로 연 후, KAFKA_HEAP_OPS="-Xmx1G -Xms1G"를
   <br>KAFKA_HEAP_OPS="-Xmx400m -Xms400m" 이렇게 바꿔줘야 한다.
-  <br>이것은 카프카가 메모리에서 사용하는 힙의 최대,최소 크기를 1GB에서 400MB메가로 바꾸겠다는 뜻이다.
+  <br>이것은 카프카가 메모리에서 사용하는 힙의 최대,최소 크기를 1GB에서 400MB로 바꾸겠다는 뜻이다.
 
 <br><br/>
 - 그후, bin 디렉토리에 들어가고, 터미널 창을 하나 더 열어서 kafka 바이너리를 압축해제 해서
