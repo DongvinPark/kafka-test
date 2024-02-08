@@ -8,12 +8,15 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class Producer {
 
-    String topic = "퍼블리시 하고자 하는 토픽의 이름";
+    String topic = "test-topic3";
 
     private final KafkaTemplate<String, Object> kafkaTemplate;
 
-    public void pub(String msg){
-        kafkaTemplate.send(topic, msg);
+    public void pub(String msg) throws InterruptedException {
+        for(int i=1; i<=10; i++){
+            Thread.sleep(10);
+            kafkaTemplate.send(topic, msg + i);
+        }
     }
 
 }
