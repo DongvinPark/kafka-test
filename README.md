@@ -29,7 +29,9 @@
   <br>config 디렉토리에 들어가서 server.properties 파일을 열고,
   <br>advertized.listeners=PLAINTEXT://your.host.name:9092 부분을
   <br>advertized.listeners=PLAINTEXT://{아까기록한 우분투 머신의 퍼블릭 IP 주소}:9092
-  <br>로 바꿔 준다. 주석은 당연히 해제해야 한다.
+  <br>로 바꿔 준다. 주석은 당연히 해제해야 하고, {아까기록한 우분투 머신의 퍼블릭 IP 주소} 이 자리를 localhost로 바꾸면 
+  <br>카프카가 실행은 되지만, 프로듀서와 컨슈머가 카프카 클러스터와 연결을 하지 못하는 문제가 발생하므로
+  <br>반드시 카프카가 실행되는 머신의 퍼블릭 IP 주소를 정확하게 적어 넣도록 한다.
   <br>만약 카프카 운영 환경이 AWS EC2 t2.micro 처럼 RAM이 1GB 밖에 안 되는 머신이라면,
   <br>bin 디렉토리의 kafka-server-start.sh 를 vim으로 연 후, KAFKA_HEAP_OPS="-Xmx1G -Xms1G"를
   <br>KAFKA_HEAP_OPS="-Xmx400m -Xms400m" 이렇게 바꿔줘야 한다.
