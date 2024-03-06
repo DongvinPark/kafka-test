@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class Producer {
 
-    String topic = "퍼블리시 하고자 하는 토픽의 이름";
+    String topic = "subject01";
 
     private final KafkaTemplate<String, Object> kafkaTemplate;
 

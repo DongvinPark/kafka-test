@@ -15,12 +15,12 @@ public class ProducerController {
 
     @GetMapping("/test-pub")
     public void testPub(){
-        producer.pub("my-kafka-message-01");
+        producer.pub("my-kafka-ack-ALL-message-01");
     }
 
-    /*@GetMapping("/check")
+    @GetMapping("/check")
     public void checkItems(){
         consumerService.displayItems();
-    }*/
+    }
 
 }
